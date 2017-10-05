@@ -9,8 +9,10 @@ This project is meant to help me learn frontend techniques by mimicing websites 
 ## How to run
 
 Make sure you have Node installed...
+
 Clone this repo...
-cd into the directory
+
+`cd` into the directory
 
 ```
 node server.js
