@@ -1,13 +1,13 @@
 'use strict'
 
-const menuBtn = document.getElementsByClassName('menu__btn')[0]
-const menuDrop = document.getElementsByClassName('menu__dropdown')[0]
-const menuItems = menuDrop.children[0].children
+const MENU_BTN = document.getElementsByClassName('menu__btn')[0]
+const MENU_DROP = document.getElementsByClassName('menu__dropdown')[0]
+const MENU_ITEMS = MENU_DROP.children[0].children
 
 let menuToggler = () => {
-    menuBtn.removeEventListener('click', menuToggler);
+    MENU_BTN.removeEventListener('click', menuToggler);
     const isVisible = isMenuVisible();
-    for (let i = 0; i < menuItems.length; i++) {
+    for (let i = 0; i < MENU_ITEMS.length; i++) {
         setTimeout(() => {
             if (isVisible) {
                 hideMenu(i);
@@ -18,24 +18,24 @@ let menuToggler = () => {
     }
 
     setTimeout(() => {
-        menuBtn.addEventListener('click', menuToggler);
-    }, menuItems.length * 100)
+        MENU_BTN.addEventListener('click', menuToggler);
+    }, MENU_ITEMS.length * 100)
 }
 
-menuBtn.addEventListener('click', menuToggler);
+MENU_BTN.addEventListener('click', menuToggler);
 
 function isMenuVisible() {
-    return menuItems[0].classList.contains('show-menu') && !menuItems[0].classList.contains('hide-menu')
+    return MENU_ITEMS[0].classList.contains('show-menu') && !MENU_ITEMS[0].classList.contains('hide-menu')
 }
 
 function hideMenu(i) {
-    let menuItem = menuItems[menuItems.length - 1 - i]
+    let menuItem = MENU_ITEMS[MENU_ITEMS.length - 1 - i]
     menuItem.classList.add('hide-menu')
     menuItem.classList.remove('show-menu')
 }
 
 function showMenu(i) {
-    let menuItem = menuItems[i]
+    let menuItem = MENU_ITEMS[i]
     menuItem.classList.remove('hide-menu')
     menuItem.classList.add('show-menu')
     if (menuItem.classList.contains('menu__item--hidden')) {
