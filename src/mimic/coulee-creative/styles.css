@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+/* Layout */
+
+.container {
+    padding: 20px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fill-window {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Circle Animation */
+
+.center__animation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+}
+
+.circle-animation {
+    position: relative;
+    opacity: 0;
+    animation: rotate-bf 2300ms ease-in-out forwards;
+    height: 500px;
+    width: 500px;
+}
+
+.circle-animation img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center__animation object {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotate-bf {
+    0% { 
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    60% {
+        opacity: 1;
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+.circle-fill {
+    opacity: 0;
+    animation: show 100ms linear forwards;
+    animation-delay: 2.3s;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

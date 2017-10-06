@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <circle style="fill:#979797;" cx="0" cy="0" r="100" transform="translate(100 100)">
+        <animateTransform attributeName="transform"
+             type="scale"
+             additive="sum" 
+             from="0 0"
+             to="1 1"
+             begin="2.1s"
+             dur="300ms"
+        />
+    </circle>
+</svg>

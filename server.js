@@ -8,4 +8,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'))
 })
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/404.html'))
+})
+
 app.listen(3000, () => console.log('App Started'))
