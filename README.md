@@ -4,7 +4,7 @@ This project is meant to help me learn frontend techniques by mimicing websites 
 
 ## Current Mimics
 
-... Coming soon!
+Coulee Creative (In progress)
 
 ## How to run
 
