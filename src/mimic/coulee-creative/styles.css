@@ -30,20 +30,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    width: 500px;
+    height: 40%;
+    width: 40%;
 }
 
 .circle-animation {
     position: relative;
     opacity: 0;
     animation: rotate-bf 2300ms ease-in-out forwards;
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
 }
 
 .circle-animation img {
     position: absolute;
+    height: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -51,6 +52,8 @@
 
 .center__animation object {
     position: absolute;
+    height: 100%;
+    width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
